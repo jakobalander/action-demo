@@ -1,0 +1,15 @@
+name: very simple workflow
+
+on: push
+
+jobs:
+  my_first_job:
+    name: My First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        env:
+          GREETING: Hello nice people at
+          COMPANY: Diabol
+        run: |
+          echo $GREETING $COMPANY
